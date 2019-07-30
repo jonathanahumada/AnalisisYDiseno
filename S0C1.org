@@ -1,0 +1,239 @@
+* S0C1: Introducción
+<2019-07-24 mié>
+# AUTHOR: Jonathan Ahumada
+De aqui en adelante:
+- ingenieria de software 1 y 2 
+- arquitectura de software
+
+Qué hacemos:
+- cómo diseñar buen software
+- lo que se hace antes de echar código
+** Int. Ingeniería Software
+- presentarse a una prueba: interpretar  diagrama 
+- Pruebas SaberPro
+- En tesis final: hay que hacer todo el modelamiento del software
+*** Por qué?**** Proyecto 
+- actividades necesarias para generar un producto software
+
+fases de proyecto:
+# TODO: Esto no se puede olvidar. Es como acordarse del nombre
+1) Planeacion #
+2) Analisis de requerimientos #
+3) Diseño #
+4) Implementación
+5) Pruebas #
+6) Mantenimientos 
+
+Se cubriran los marcados con #.
++ nace en años 70
+- se origina a partir de muchos errores
+- hay una cuestión ética 
+
+*** Objetivo
+- evitar que el software fracaso
+
+*** Bibliografia 
+- software Engeneering
+
+*** Ejemplos
+1) FBI
+- Fracasis de casos virtuales
+- costo de 170 millones USD
+- razón: cambio constante en los requerimientos 
+  Esta es una de las razones más grandes en el desarrollo. 
+  También código indeciciente
+- se abandonó en el 2005
+2) Cohete Ariane 5
+- costo 7 billos USD
+- exploto a 37 segundos lanzamiento
+- fallo en la conversion de punto flotante entero de 16 bits 
+3) Control radiación dispositivo médico
+- calibrar imanes inducir radiacion determinada
+- consecuencia: 5 personas murieron radiación excesiva 
+- llamadas entre varias funciones no se sicronizaban bien debido calibracion imanes tomaba 8 segundos
+
+** Que es la ingeniería de SW?
+Palabras clave:
+- modelos-fallos
+- testing
+- estructura proyecto
+- documentos, manuales
+- optimizaxion 
+
+Definición formal:
+aplicacion de un efoque
+- sistematico,
+  conjunto pasos organizados y definidos. La IS no se hace "como uno quiera". 
+  Uno aprende cuáles son esos pasos para lograr buen software. 
+- disciplinado y
+  Es estricta. Tiene una organización específica. Sigue un *estandar* específico
+- cuantificable
+  Se puede medir. Existen metricas desarrollo de SW incluso para ver el *proceso* 
+ en el desarrollo, operacion y mantenamiento de SW.
+
+En resumen: *aplicar la ingeniería la desarrollo de software*
+
+Todo proyecto de ingeniería (en el mundo): 
+- electronica
+- civil
+- industrial 
+- etc 
+
+Sigue un conjunto de pasos:
+1) Analisis
+2) Diseño 
+3) Implementacion
+4) Prueba
+
+Con estas fases trata de minimizar lo más posible los errores.
+- garantiza la calidad del software
+
+*** Ejemplo: Chirahara
+ El puente chirahara se cayó porque hubo un fallo en fase de diseño.
+
+La idea es que no se caiga el puente. Que al ir a la implementación
+no falle. 
+
+*** Entonces Perminte
+- confiable
+  que funcione, no haya fallos de seguridad
+- mantenimiento
+  que se pueda extender, modificar
+- se ajusta a los requerimientos
+  que cumple con lo que el ciente pidio en prime rlugar
+
+*** Las cuatros Pes de la IS
+- Personas (People
+- Producto (Product
+- Project (Proyect
+- Proceso (Process
+**** Personas 
+- tmbn se denominan *stakeholders* 
+  a todas las personas que participan se les llama stakeholders.  No son solo programadores. 
+- pueden ser
+  -- Programadores
+  -- interfaces de usuario 
+  -- etc.
+
+Equipos que participan : 
+  -- gestion del negocio
+  -- gestión del proyecto
+  -- equipo desarrollo 
+  -- clientes (no siempre son los usuarios finales) 
+  -- usurios finales
+**** Producto
+- va acompañado de otras cosas, no solo el SW
+- por ejemplo, diagramas. La documentación mdel proyecto
+- codigo fuente
+  Depende del contrato, puede reservarse.
+- documentos prueba
+  hay formatos especificos que especifican qué tipo de pruebas 
+- documentos de cliente (man usuario, instalacion)
+**** Proyecto 
+- actividades necesarias para generar un producto software
+
+fases de proyecto:
+# TODO: Esto no se puede olvidar. Es como acordarse del nombre
+1) Planeacion #
+2) Analisis de requerimientos #
+3) Diseño #
+4) Implementación
+5) Pruebas #
+6) Mantenimientos 
+
+Se cubriran los marcados con #.
+**** Proceso
+Realmente las fases pertenecen a esta última P. 
+- requisitos
+- diseño
+- implementacion
+- verificacion
+- mantenimiento
+
+Puede suceder que en la fase de "análisis" combinan "planeación" y "requerimiento". O incluso iniciacion
+
+Es decir. Hay moodelos de:
+- 7 pasos 
+  INICIACION PLANEACION ANALISIS DISEÑO IMPLEMENTACION PRUEBAS MANTENIMIENTO
+- 5 pasos
+  REQIERIMIENTOS DISEÑO IMLEMENTACION PRUEBAS MANTENIMIENTO
+- 4 pasos
+  ANALISIS DISEÑO IMPLEMENTACION PRUEBA
+
+# PRUEBA a veces se subdivide en PRUEBAS y MANTENIMIENTO
+
+*** Modelos de proceso de desarrollo de SW (no estuvo corregir)
+define orden y frecuencia con la que se ejecutan las fases 
+- modelo en cascada
+- iterativo e incremental
+- prototipada y pruebas de concepto
+- modelo en espiral
+- proceso unificado y RUP (actualmente más utilizado)
+*** En detalle 
+- diferentes modelos para desarrollar las fases
+**** Iniciacion 
+- nace la idea del producto
+- identifican clientes y segmentos mercados
+- entrevistan clientes identidicar necesidades 
+- estudio aplicaciones similares
+- analiza factibilidad (p. ej en qué lenguaje se va desarrollar, si es posible) y posible aceptacion usuarios 
+**** Planeación
+- okab oara deternubar recursos necesarios (tiempos cronogramas, personal, costo general proyecto).
+
+  Es un documento, pero no queda fijo. Pueden hacer cambios si se modifica el cronograma. 
+
+- desarrikka *Plan de Gestión de la Configuración*
+  
+  como varián las versiones del programa.
+
+- elaborar *Plan de aseguramiento de la calidad*
+  
+  por ejemplo, dictamina como escribir las funciones
+#+BEGIN_SRC 
+nombreModulo_funcion
+## Pasa a ser 
+login_iniciarSesion(){}
+#+END_SRC
+o tambien cuantas líneas se escriben por dia. 
+
+**** Análisis
+Hay analistas de requerimientos que van a los clientes y a los usuarios para *levantar los requerimientos*
+
+Recordemos que:
+
+#+BEGIN_SRC 
+Requerimiento = Funcionalidad
+#+END_SRC
+
+Aún no se piensa para nada en *cómo se va a desarrollar esa funcionalidad*
+
+- se puede acer por entrecistas, lluvias ideas
+
+**** Diseño
+Se define como:
+- se divide en modulo
+- descrie el SW en diagramas 
+- con la respectiva documentacion 
+
+En este punto aun *no* se ha escrito una sola línea
+
+**** Implementacion (o desarrollo)
+Donde se programa literalmente.
+**** Pruebas
+Normalmente hay un equipo de testers.
+- tratan de dañar el sw 
+- para poderlo corregir 
+
+**** Mantenimiento
+- *paso a produccion*
+- después de cada mantenimiento se lanzan nuevas versiones sw 
+ 
+*** Etica
+**** IEEE
+**** ACM
+
+** Ingenieria / arquitectura
+La aqruitectura de SW está dentro de la Ingeniería. 
+Se encarga de: 
+- no de programar 
+- sino de analizar y diseñar 
