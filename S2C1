@@ -1,0 +1,106 @@
+* S2C1 <2019-07-31 mié>
+- 28 agosto hasta las 12:45
+** Modelo de procesos de Desarrollo de SW
+- nunca fue como lo es ahora
+- veremos los modelos que se han utilizado en el tiempo
+- no empezaron sabiendo 
+- la cuestion no era tan sencilla
+- de la practica han surgido los procesos
+- definen el *orden* yla *frecuencia* con la que se ejecutan las *fases*
+*** Waterfall model
+- uno de los modelos mas antiguos
+- ejecutar las fases de forma sequencial natural
+- con la salvedad de que si es necesario devolverse solo se puede hacer a la *inmediatamente anterior*
+- o sea, /loops/ solo entre fases adyacentes
+#+BEGIN_QUOTE
+Aquí estamos hablando de todo el SW. Hay otros modelos
+donde esto se ejecuta en cada modulo. 
+- Jorge Bacca
+#+END_QUOTE
+**** Ventajas
+- simple
+- facil de usar
+- facul de gestuionar debido a rigidez
+- funciona bien para proyectos pequedos donde los requeimientos se conocen bien. 
+
+**** Desventaja
+- los requerimientos se deben conocer muy bien desde el inicio.
+- fase de pruebas al final
+- falta de paralelismo
+- equip de desarrikki oyede qyedarse esperando a que terminen otras fases. 
+
+*** Modelo iteratico incremental
+- se pasa por todas las fases hasta que se obtiente una version inicial (/prototipo/)
+- iteraciones *no son necesariamente secuenciales* 
+- cada iteracion es tratada como un proyecto más pequeño
+
+**** tipos de release (o incrementos)
+1) prototipos: implementacion parcial, permite identificar y retirar riesgos de un proyecto de software. Permite obtener ideas y comprender aspectos de un proyecto. Determina si es *factible* ser implementado
+2) pruebas de concepto: wireframes/mockups. Simulaciones, aunque pueden ser muy costosas
+3) release interno. Release: version funcional del SW. Para evaluar Peer to Peer.
+4) release externo
+
+*** Modelo en Espiral 
+- es un modelo iterativo
+- cada iteracion obedece a una fase
+- pero en cada iteracion se hace el análisis de riesgo
+
+**** Ventajas
+- es orientado por riesfos
+- identifican de forma tempreana los riesgos
+- SW evoluciona a medida que el proyecto avanza
+- planeacion del roecto es inherente al modelo
+**** Desventajas
+- complicado de usar debido a que se requiere un análisis de riesgos que realicee un experto
+- No es adecuado para proyectos pequeños
+
+*** Proceso unficado de desarrollo de Software 
+- IBM creo el (*R*ational *U*nified *P*rocess)
+- lo utilizan mucho las empresas 
+- las iteraciones se mantienen de los modelos anteriores
+- pero tiene sus propias fases
+- todo cobra sentido se lo ves como procesos simultáneos
+
+**** Incepcion
+- factibilidad del proyecto
+- define /caso de negocio/
+- establece vision del producto y so ámbito
+- costos y cronograma
+- se evaluan los riesgos  controyen uno varios prototipos
+
+**** Elaboration
+- los requerimientos terminan de definirse 
+- se crea la arquituctura de base del software
+- se realizan implementaciones iterativad del úcleo de la arquitectura
+- se refina el análisis de riesgos
+- se refina el plan del proyecto y se define el plan para iniciar la cosntruccion del SW
+**** Construction
+- se imolemente el SW de forma iterativa
+- Se ejectuan pruebas y se preparan el sistema para el despliegue
+
+**** Transition
+- se llevan a cabo pruebas del SW
+- Se corrigen defectos
+- Se crean manuales de usuario
+- Se entrefa el sistema para producción
+- se realiza el entrenaiento de uuarios, clientes y se proporciona soporte 
+**** Ventajas
+- Es un modelo que cubre la mayoría de aspectos de un proyecto de software. Muy completo
+- amplkiamente utilizado y conocido
+**** Desventajas
+- concebido para proyectos pequeños
+
+
+** Plan de aseguramiento de la calidad (Fase: iniciación y planificación)
+*** Qué es la calidad?
+Dos condiciones:
+1) se ajusta a los requerimientos definidos
+2) se ajustan a las necesidades de los usuarios finales 
+
+- la calidad es una constante de todo el proyecto de desarrollo
+- hay principios de gestion de la calidad (ver diapositivas)
+- distingir entre plan de calidad de la empresa y del proyecto
+*** Entrando en materia (SQAP)
+- hay un /equipo/ de personas que se encarga se que se cumpla la caliad
+- normalmente es 1 persona de calidad por cada 7 personas de SW
+- *artefacto*: cualquier cosa que surge en el proceso de desarrollo 
