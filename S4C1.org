@@ -1,0 +1,69 @@
+* S4C1 <2019-08-14 mié>
+
+- preguntas por quien garantiza la calidad
+- revisiones / auditorias: sorpresa
+- cómo se gestionan los fallos
+
+** Principios de las inspecciones de calidad
+1) Procesos por pares
+2) Roles: moderador(el capo), autor, registrador
+3) Deteccón de defectos antes que reparación de defectos (detectar /tan temprano como sea posible/ un defecto, habría que devolverse y corregir fases anteriores y es /costoso/)
+4) Uso de los checklists
+5) Preparación del artefacto: debe estar completo, listo. (si es un prototipo, que esté /listo/ en cuanto tal)
+6) Preparación adecuado: la inspeccion es compleja y requiere tiempo (hay que dejar una /holgura/ en el cronograma porque las inspecciones requieren tiempo)
+7) Recolección de métricas:
+8) Tiempo limite: las reuniones de inspecciones deben tener un tiempo límite para facilitar la inspección.
+
+
+** Gravedad de los defectos del software
+- urgente: causa que el sistema se caiga
+- alta: causa impedimientos en funciones criticas y no exise una posible solución posiibnle (no se arregla añ reiniciar el sistema)
+- media:  impedimentos funciones criticas con solucion posible
+- baja: causa inconvenientes o el fallo es molesto. 
+- ninguno: ninguno de los anteriores 
+
+** CMMI
+Estándar internacional que otorga certificacion. Mide el nivel de madurez de las empresas. 
+- nivel 1: initial
+- nivel 2: managed
+- nivel 3: defined
+- nivel 4: quantitatively managed 
+- nivel 5: optimizing
+** Tarea 
+Yo quedé en hacer el grupo 4: Documentacion, Estánderes, Prácticas, Convenciones y métricas
+
+** Gestión de la configuración (pertenece a la fase Planeación)
+- Software Configuration Management Plan (SCMP)
+- proceso que identifica, monitorea y almacenan todos los artefactos de un SW
+- cada artefacto es denominado 'ítem de la Configuración'
+
+*** Objetivos de la configuración del software 
+- integridad de la versión actual 
+- integridad de sobre-escritura 
+- deshacer
+- recuperación de la configuración 
+## lex: "rollback"
+
+** Actividades en el SCMP 
+- identificar los items de a configuración
+- ..
+*** Versionado del software
+- la forma recomendada por GNU es:
+#+BEGIN_SRC 
+Major.Minor. Revision
+#+END_SRC
+- o ,
+#+BEGIN_SRC 
+Major. Minor.Patch
+
+#+END_SRC
+
+- el patch soluciona cosas menores
+- el minor cambia cuando se modifica el API con compatibilidad hacia atrás.
+- el mayor cambia cuando se agregan nuevas funcionalidades pero que NO son compatibles hacia atrás.
+
+**** números especiales
+- 0 :: alfa
+- 1 :: beta
+- 2 :: candidatas a release
+- 3 :: produccion
